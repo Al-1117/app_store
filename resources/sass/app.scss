@@ -1,0 +1,34 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap');
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+// Partials
+@import 'partials/_my_variables';
+@import 'partials/_general';
+@import 'partials/_header';
+@import 'partials/_main';
+@import 'partials/_show_main';
+
+
+
+
+
+/* @import 'partials/_mixins';
+@import 'partials/_common';
+@import 'partials/_header';
+@import 'partials/_main_show';
+@import 'partials/_main_forms';
+@import 'partials/_main_home';
+@import 'partials/_main_sponsor';
+@import 'partials/_main_statistics';
+@import 'partials/_main_research';
+@import 'partials/_footer';
+@import 'partials/_error';
+@import 'partials/_apartmentlist';
+@import 'partials/_messages'; */

@@ -1,0 +1,85 @@
+#show{
+    .app_header{
+        height: 170px;
+        display: flex;
+        padding: 10px;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $primary_color;
+
+
+        .app_img_show{
+
+            img{
+                height: 100%;
+                width: 120px;
+                border-radius: 16px;
+            }
+        }
+
+        .app_details{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .price{
+                color: white;
+                font-size: 1rem;;
+                font-weight: bolder;
+                background-color:#0072ff;
+                padding: 5px 15px;
+                border-radius: 15px;
+                width: 80px;
+                text-align: center;
+            }
+        }
+        
+    }
+
+    // APP OVERVIEW
+    .app_overview{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        //background-color: chocolate;
+        .details_item{
+            color: $primary_color;
+            padding-top: 1rem;
+            flex-direction: column;
+            display: flex;
+            padding-top: 1rem;
+            text-align: center;
+
+            :not(:first-child){
+                color: $primary_color_variant;
+                border-right: 1px solid $primary_color;
+            }
+            :last-child{
+                height: 25px;
+                overflow: hidden;
+
+            }
+
+            .icon_item{
+                font-size: 1.3rem;
+                height: 35px;
+                line-height: 50px;
+            }
+    
+            
+             
+        }
+        :last-child{
+            :not(:first-child){
+                border-right: none;
+            }
+        }
+
+       
+      
+
+       
+       
+    }
+    
+}

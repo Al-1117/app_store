@@ -1,0 +1,73 @@
+
+/* RESET  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oxygen';
+}
+  /* END OF RESET  */
+
+//   GENERAL
+/* Links */
+a{
+  text-decoration: none;
+  color: inherit;
+}
+  
+  /* Lists */
+  ul li{
+  list-style: none;
+}
+  
+  /* Images */
+  img{
+  height: 100%;
+}
+
+// APP WRAPPER
+.app_wrapper{
+  height: calc(100vh - 30px);
+  width: 100%;
+  background-color: black;
+
+
+
+  .status_bar{
+    background-color: lightblue;
+    height: 30px;
+    width: 100%;
+
+  }
+
+  // APP CONTAINER
+  .app_container{
+    display: flex;
+    height: 100%;
+    background-color: white;
+    // .LEFT_SIDE
+    .left_side{
+      justify-content: flex-start;
+      height: 100%;
+      width: 200px;
+      background-color: #eeeeef;
+      overflow: auto;
+
+    }
+
+    //RIGHT SIDE
+    .right_side{
+      justify-content: flex-end;
+      height: 100%;
+      width: calc(100% - 200px);
+      background-color: white;
+      overflow: auto;
+
+
+    }
+
+  }
+
+}
+
+  

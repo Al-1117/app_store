@@ -1,0 +1,183 @@
+.app_container{
+    .left_side{
+        padding: 0px 10px;
+        .window_buttons{
+            display: flex;
+            height: 50px;
+            width: 100%;
+            padding-top: 10px;
+            margin-bottom: 6px;
+            & > ul{
+                display: flex;
+                align-content: center;
+                align-self: center;
+                //padding-left: 15px;
+
+                :nth-child(2){
+                    background-color: orange;
+                }
+
+                :nth-child(3){
+                    background-color: hsl(120, 89%, 45%);
+                }
+                              
+                li{
+                    display: flex;
+                    height: 13px;
+                    width: 13px;
+                    background-color: #ff1313;
+                    border-radius: 50%;
+                    margin: 1px 4px;
+                    padding: 0px 10;
+                    text-align: center;
+
+                    span{
+                        font-size: 9px;
+                        width: 100%;
+                    }
+                }
+                    
+                
+            }
+        }
+
+        // SEARCH SECTION
+
+        .search{
+            .search_container{
+                padding: 5px;
+                background-color: $primary_color;
+                display: flex;
+                border-radius: 5px;
+                height: 35px;
+
+                .search_icon{
+                    font-size: 17px;
+                    width: 30px;
+                    margin-left: 5px;
+                    padding-top: 3px;
+                    color:$primary_color_variant;
+                }
+
+                .search_input{
+                    border: none;
+                    background-color: none;
+                    background-color: unset;
+                    width: 100%;
+                    &:focus{
+                        border: none;
+                    }
+                }
+                
+            }
+        }
+
+        // LATERAL NAVIGATION
+        .lateral_nav{
+            padding: 1rem 0rem;
+            ul{
+                padding: 0;
+                li{
+                    padding: 5px 0px;
+                    font-size: 1rem;
+                    padding: 5px 0px;
+                    margin-bottom: 8px;
+                    padding-left: 7px;
+                    border-radius: 5px;
+                    cursor: default;
+                    i{
+                        padding-right: 4px;
+                         font-size: 18px;
+                        color: #3490dc;
+                    }
+                }
+            }
+
+            .selected{
+            background-color: $primary_color;
+            }
+
+        }
+
+    }
+    // RIGHT SIDE
+    .right_side{
+        .section_title{
+            background-color: hsl(0, 0%, 87%);
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            width: 100%;
+        }
+        .main_content{
+            padding: 20px 30px;
+            
+            .title{
+                margin: 0;
+            }
+
+            .main_app_container{
+                .app_container{
+                    display: flex;
+                    height: 100%;
+                    padding: 12px 0px;
+                    background-color: white;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    
+                    .single_app{
+                        padding: 0 25px;
+                        padding-top: 15px;
+                        margin: 25px 0px;
+                        display: flex;
+
+                        .app_img{
+                            padding: 10px;
+                            margin: 20px;
+                           img{
+                            border-radius: 20px;
+                           }
+                        }
+                    }
+                    .app_details{
+                        width: 200px;
+                        padding: 15px 0px;
+                        border-bottom: 1px solid #dedede;
+
+                        h6{
+                            margin:0;
+                        }
+
+                        p{
+                            height: 50px;
+                            color: dimgray;
+                            margin-bottom: 0;
+                            overflow: hidden;
+                            margin-top: 5px;
+                        }
+                        span{
+                            color: lightgrey;
+                        }
+                        .price{
+                            background-color: lightgrey;
+                            border-radius: 15px;
+                            width: 70px;
+                            height: 25px;
+                            text-align: center;
+                            font-size: 13px;
+                            padding: 5px;
+                            font-weight: 900;
+                        }
+                    }
+                }
+            }
+
+            .highlight{
+                background-color: gold;
+            }
+           
+
+        }
+        
+    }
+}
