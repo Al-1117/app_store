@@ -1,62 +1,170 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<!DOCTYPE html>
+<html lang="en">
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Title -->
+        <title>App Store</title>
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <!-- Script -->
+        <script src="{{asset('js/app.js')}}"></script>
+        
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 
-## About Laravel
+    </head>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    <body>
+        {{-- APP WRAPPER --}}
+        <div class="app_wrapper">
+            {{-- HEADER SECTION --}}
+            <header>
+                <div class="nav_bar">
+                    <div class="container-fluid">
+                        <div class="row">
+                            {{-- Navbar --}}
+                            <div class="left app_menu col-5">
+                                <ul>
+                                    {{-- Apple Logo --}}
+                                    <li class="logo">
+                                        <i class="fab fa-apple apple_logo"></i>
+                                    </li>
+                                    <li>App Store</li>
+                                    <li>Modifica</li>
+                                    <li>Store</li>
+                                    <li>Finestra</li>
+                                    <li>Aiuto</li>
+                                </ul>
+                            </div>
+                            {{-- Status bar --}}
+                            <div class="right app_menu col-6 offset-sm-1">
+                                <ul>
+                                    <li>50%</li>
+                                    <li><i class="fas fa-battery-half"></i></li>
+                                    <li><i class="fas fa-wifi"></i></li>
+                                    <li><i class="fas fa-search"></i></li>
+                                    {{-- To be set by JS  --}}
+                                    <li id="date_time"></li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </header>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+            {{-- MAIN CONTENT --}}
+            <div class="app_container">
+                {{-- Left Side --}}
+                <div class="left_side">
+                    {{-- Mac's Windows buttons control --}}
+                    <div class="window_buttons">
+                        <ul>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                        </ul>
+                    </div>
+                    {{-- Search area --}}
+                    <div class="search">
+                        <div class="search_container">
+                            <i class="fa fa-search search_icon" aria-hidden="true"></i>
+                            <input class="search_input" type="text" value="" placeholder="Cerca">
+                        </div>
+                    </div>
+                    {{-- Lateral Navigation --}}
+                    <div class="lateral_nav">
+                        <ul>
+                            <li class="">
+                                <i class="far fa-star"></i>
+                                Scopri
+                            </li>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+                            <li>
+                                <i class="fas fa-gamepad"></i>
+                                Arcade
+                            </li>
 
-## Learning Laravel
+                            <li>
+                                <i class="fas fa-paint-brush"></i>
+                                Crea
+                            </li>
+                            
+                            <li>
+                                <i class="far fa-paper-plane"></i>
+                                Lavora</li>
+                            <li class="selected">
+                                <i class="fas fa-rocket"></i>
+                                Gioca
+                            </li>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+                            <li>
+                                <i class="fas fa-hammer"></i>
+                                Sviluppa
+                            </li>
+                            
+                            <li>
+                                <i class="fas fa-stream"></i>
+                                Categorie
+                            </li>
+                            
+                            <li>
+                                <i class="far fa-arrow-alt-circle-down"></i>
+                                Aggiornamenti
+                            </li>
+                        </ul>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+                    </div>
+                        
+                </div>
 
-## Laravel Sponsors
+                {{-- Right Side --}}
+                <div class="right_side">
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+                    <div class="section_title">
+                        <h2>Scopri</h2>
+                    </div>
 
-### Premium Partners
+                    <div class="main_content">
+                         {{-- Section intro --}}
+                        <div class="title">
+                            <h1>Gioca</h1>
+                            <hr>
+                        </div>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+                        {{-- App Container --}}
 
-## Contributing
+                        <div class="main_app_container">
+                            <div id="app_template" class="app_container ">
+                               
+                            </div>
+                            {{-- TEMPLATE HANDLEBARS PER LO STAMPA DEI RISULTATI PROVENIENTI DALLA CHIAMATA AJAX --}}
+                            <script id="source_app_template" type="text/x-handlebars-template">
+                                <ul class="single_app col-lg-4 col-md-6">
+                                    <li class="app_img">
+                                        <img src="@{{img_small}}" alt="">
+                                    </li>
+                                    <li class="app_details">
+                                        <a href="{{url('show')}}/@{{id}}"><h6 class="app_name">@{{name}}</h6></a>
+                                        <p>@{{summary}}</p>
+                                        <span>@{{category_name}}</span>
+                                        <h5 class="price"><a href="">@{{amount}}</a></h5>
+                                    </li>  
+                                </ul>
+                            </script>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+                        </div>
+                    </div>
+                    
+                </div>
 
-## Code of Conduct
+            </div>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+        </div>
 
-## Security Vulnerabilities
+    </body>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+</html>
